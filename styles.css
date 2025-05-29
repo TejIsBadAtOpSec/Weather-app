@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #007BFF; /* Blue background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 3px solid #0056b3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #0056b3;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.date-time {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #d3e0ff;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather-card {
+  background: #ecf0f3;
+  border: 2px solid #bbb;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.weather-card img {
+  width: 70px;
+  margin-top: 10px;
+}
+
+.info {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.info p {
+  margin: 6px 0;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.linkedin-box {
+  margin-top: 20px;
+}
+
+.linkedin-button {
+  background-color: #0e76a8;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #0a5c87;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+

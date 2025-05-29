@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App by Tejas Melkote</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .outer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .subtitle {
+      color: #666;
+    }
+    .date-time {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    .input-box {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .weather-card {
+      margin-top: 20px;
+    }
+    .weather-card.hidden {
+      display: none;
+    }
+    .info p {
+      margin: 5px 0;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .linkedin-box {
+      margin-top: 20px;
+    }
+    .linkedin-button {
+      background-color: #0077b5; /* LinkedIn blue */
+      color: white; 
+      padding: 10px 15px; 
+      border-radius: 5px; 
+      border: none; 
+      cursor: pointer; 
+    }
+    .linkedin-button:hover {
+      background-color: #005582; /* Darker LinkedIn blue */
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-container">
+    <div class="container">
+      <h1>🌤️ Weather App</h1>
+      <p class="subtitle">By Tejas Melkote</p>
+      <div class="date-time" id="dateTime"></div>
+
+      <div class="input-box">
+        <input type="text" id="locationInput" placeholder="Enter city..." />
+        <button onclick="getWeather()">Get Weather</button>
+      </div>
+
+      <div id="weatherCard" class="weather-card hidden">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" src="" alt="Weather Icon"/>
+        <div class="info">
+          <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+          <p><strong>Condition:</strong> <span id="condition"></span></p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+          <p><strong>AQI:</strong> <span id="aqi"></span></p>
+        </div>
+      </div>
+
+      <div id="error" class="error"></div>
+
+      <!-- LinkedIn Button -->
+      <div class="linkedin-box">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/tejas-melkote-390545309/" target="_blank">
+          <button class="linkedin-button">Visit LinkedIn</button>
+        </a>
+      </div>
+
+      <footer>© 2025 Tejas Melkote</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
